@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        Реестры ОСФР
+        {% endblock %}
+    </title>
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'mainapp/plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/dist/css/adminlte.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/custom/css/custom.css' %}">
+
+    {% endblock %}
+
+    <link rel="icon" href="{% static 'mainapp/ico/favicon.ico' %}">
+
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+    {% include "mainapp/_inc/navbar.html" %}
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="{% url 'mainapp:index' %}" class="brand-link">
+            <span class="brand-text font-weight-light">Реестры ОСФР</span>
+        </a>
+
+        {% include "mainapp/_inc/sidebar.html" %}
+
+
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>
+        <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>Реестры ОСФР</b> v 1.0.0
+        </div>
+        <strong>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#staticBackdrop"><i
+                    class="fas fa-bug mr-2"></i> Сообщить об ошибке приложения
+            </button>
+        </strong>
+
+        {% include "mainapp/_inc/error_report_modal_form.html" %}
+
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+{% block js %}
+<!-- jQuery -->
+<script src="{% static 'mainapp/plugins/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'mainapp/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'mainapp/dist/js/adminlte.min.js' %}"></script>
+<!-- AdminLTE for demo purposes -->
+<!--<script src="{% static 'mainapp/dist/js/demo.js' %}"></script>-->
+{% endblock %}
+</body>
+</html>

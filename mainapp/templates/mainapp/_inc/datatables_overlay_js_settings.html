@@ -1,0 +1,16 @@
+<script>
+    customOverlay = document.querySelector('#customOverlay');
+
+    setInterval(function(row){
+        processingEls = document.querySelector('#dataTable_processing');
+
+        LOADING = 'block';
+
+        if (processingEls.style.display == LOADING) {
+          customOverlay.style.display = null;
+        } else {
+            customOverlay.style.display = 'none';
+        }
+     }, 200);
+
+</script>

@@ -1,0 +1,26 @@
+Для загрузки реестров в ручном режиме:
+python manage.py command_name [--full_parse] registry_internal_name "file_path"
+
+В автоматическом парсинге не участвуют Реестр безработных граждан и Реестр ЛРП от департамента
+
+При этом command_name:
+    - Реестр ЛРП: registry_lrp_process_v_2
+    - Реестр НД: registry_id_process_v_2
+    - Реестр ЗП: registry_zp_process_v_2
+    - Реестр безработных граждан: registry_br_process_v_2
+    - Реестр Ростехнадзора по транспортным средствам: registry_rtn_ts_process_v_2
+
+При этом registry_internal_name:
+    - Реестр ЛРП: registry_lrp
+    - Реестр НД: registry_id
+    - Реестр ЗП: registry_zp
+    - Реестр безработных граждан: registry_br
+    - Реестр Ростехнадзора по транспортным средствам: registry_rtn_ts
+
+--full_parse указать в случае полной замены данных в таблице, в случае дозаписи данных в существующую таблицу не указывать
+
+Исключение Реестр ЛРП от департамента:
+python manage.py registry_lrp_dop_process_v_2 [--full_parse] "file_folder"
+
+--full_parse смысл тот же, что и выше
+file_folder это папка с файлами данных ЛРП

@@ -1,0 +1,119 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'mainapp/plugins/fontawesome-free/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/dist/css/adminlte.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/custom/css/custom.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row offset-md-2">
+    <div class="col-md-2">
+        <h2>
+            {% include "authapp/_inc/back_to_users.html" %}
+        </h2>
+    </div>
+    <div class="col-md-6 ">
+        <h2>
+            Назначить источники данных
+        </h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <!-- iCheck -->
+        {% if is_changed %}
+            <form method="post">
+            {% csrf_token %}
+            <div class="card card-success">
+                <div class="card-header">
+                    <h3 class="card-title">Разрешения для пользователя <b>{{ target_user.username }}</b> успешно изменены:</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Minimal style -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- checkbox -->
+                            {% for permission in permissions %}
+                            <div class="form-group clearfix">
+                                <div class="icheck-success d-inline">
+                                    <input type="checkbox" id="checkboxSuccess{{ forloop.counter }}"
+                                           name="{{permission.0.internal_service_registry_name}}"
+                                           {% if permission.1 %}
+                                           checked
+                                           {% endif %}
+                                           disabled>
+                                    <label for="checkboxSuccess{{ forloop.counter }}">
+                                        {{permission.0.short_registry_name}} | {{permission.0.long_registry_name}}
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            {% empty %}
+                            <h3>В приложении нет данных для разрешений</h3>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+<!--                    <input type="submit" value="Назначить права" class="btn btn-primary">-->
+                    <a href="{% url 'authapp:users' %}" class="btn btn-default">К списку пользователей</a>
+                </div>
+            </div>
+        </form>
+        {% else %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">Выберите данные к которым у пользователя <b>{{ target_user.username }}</b>
+                        есть доступ: </h3>
+                </div>
+                <div class="card-body">
+                    <!-- Minimal style -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- checkbox -->
+                            {% for permission in permissions %}
+                            <div class="form-group clearfix">
+                                <div class="icheck-success d-inline">
+                                    <input type="checkbox" id="checkboxSuccess{{ forloop.counter }}"
+                                           name="{{permission.0.internal_service_registry_name}}"
+                                           {% if permission.1 %}
+                                           checked
+                                           {% endif %}
+                                    >
+                                    <label for="checkboxSuccess{{ forloop.counter }}">
+                                        {{permission.0.short_registry_name}} | {{permission.0.long_registry_name}}
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            {% empty %}
+                            <h3>В приложении нет данных для разрешений</h3>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Назначить права" class="btn btn-primary">
+                    <a href="{% url 'authapp:users' %}" class="btn btn-default float-right">Выйти без сохранения</a>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+
+    </div>
+</div>
+
+
+{% endblock %}

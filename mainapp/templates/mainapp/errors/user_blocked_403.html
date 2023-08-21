@@ -1,0 +1,25 @@
+{% extends "mainapp/errors/base.html" %}
+
+{% block title %}
+403 - Доступ запрещен
+{% endblock %}
+
+{% block content %}
+<div class="error-page">
+    <h2 class="headline text-warning"> 403</h2>
+
+    <div class="error-content">
+        <h3><i class="fas fa-exclamation-triangle text-warning"></i> Ваш профиль был заблокирован на {{ login_block_in_minutes }} минут.</h3>
+        <p>
+            Вы ввели неправильные данные для авторизации несколько раз подряд и были заблокированы.
+        </p>
+        <p>
+            По истечении 30 минут с момента блокировки вы получите попытку входа.
+            Если и в данном случае авторизация будет неудачной, вы будите снова заблокированы на {{ login_block_in_minutes }} минут.
+        </p>
+        <p>
+            <a href="{% url 'authapp:login' %}">Вернуться на страницу авторизации</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

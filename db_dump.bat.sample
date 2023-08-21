@@ -1,0 +1,10 @@
+:: @echo off
+For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a%%b)
+SET ENV_FILE=.env
+SET Path2PostqreSQLBin="C:\Program Files\PostgreSQL\9.6\bin"
+SET Path2OutputDumpFile="C:\code\registry_viewer\data\db_dackups\db_dump_%date%_%mytime%.sql"
+FOR /F "tokens=*" %%i in ('type %ENV_FILE%') do SET %%i
+SET PGPASSWORD=%DB_PASSWORD%
+
+cd %Path2PostqreSQLBin%
+pg_dump -U %DB_USER% -h %DB_HOST% -p %DB_PORT% %DB_NAME% > %Path2OutputDumpFile%

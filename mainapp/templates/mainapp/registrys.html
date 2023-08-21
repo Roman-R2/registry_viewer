@@ -1,0 +1,68 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="card card-default" style="margin-bottom: 30px;">
+
+    <div class="card-header">
+        <h3 class="card-title">
+            Общий поиск по СНИЛС
+        </h3>
+    </div>
+    <form action="{% url 'searchapp:search_for_snils' %}" method="post">
+        {% csrf_token %}
+
+        <div class="card-body">
+            <div class="input-group input-group-lg">
+                <input type="search" class="form-control form-control-lg" placeholder="Введите СНИЛС для поиска"
+                       class="form-control" data-inputmask='"mask": "999-999-999 99"' data-mask name="search_snils"
+                       required {% if search_snils %} value="{{search_snils}}" {% endif %}>
+                <span class="input-group-append">
+                    <button type="submit" class="btn btn-info btn-flat">Найти!</button>
+                  </span>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    {% for item in compiled_links_data %}
+    <div class="col-md-3 col-sm-6 col-12 r2_box_link">
+        <a href="{% url 'mainapp:index' %}{{ item.internal_service_registry_name }}/" class="" style="height: 300px">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"></span>
+                <div class="info-box-content">
+                    <span class="info-box-text"><h4>{{ item.registry_short_name }}</h4></span>
+                    <span class="info-box-number">{{ item.registry_description }}</span>
+                    {% if item.registry_last_parse_date %}
+                    <span class="info-box-number" style="padding-top: 35px; font-size: 10pt;">Обновлено: {{item.registry_last_parse_date}}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+    </div>
+    {% empty %}
+    <div class="callout callout-warning col-md-12 col-sm-12 col-12">
+        <h5>У вас не подключено ни одного источника данных!</h5>
+        <p>Администратор данных еще не назначил вам доступ. Если все запросы поданы - просьба сообщить об инценедте для
+            ускорения принятия решения :)</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block js %}
+
+{% include "mainapp/_inc/active_link_js_settings.html" %}
+{% include "mainapp/_inc/collapse_js_settings.html" %}
+{% include "mainapp/_inc/inputmask_js_settings.html" %}
+
+<script>
+  $(function () {
+    $('[data-mask]').inputmask()
+  })
+
+</script>
+
+{% endblock %}

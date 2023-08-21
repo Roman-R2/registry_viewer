@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:o="urn:schemas-microsoft-com:office:office"
+            xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+            xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml"
+            xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
+            xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+            xmlns:w10="urn:schemas-microsoft-com:office:word"
+            xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
+            xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
+            xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
+            xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
+            xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+    <w:body>
+        <w:p w:rsidR="00BA3AA2" w:rsidRDefault="00BA3AA2" w:rsidP="00BA3AA2">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:jc w:val="center"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                    <w:lang w:val="en-US"/>
+                </w:rPr>
+            </w:pPr>
+        </w:p>
+        <w:p w:rsidR="00A20A11" w:rsidRPr="0000306F" w:rsidRDefault="00A20A11" w:rsidP="00BA3AA2">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:jc w:val="center"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00BA3AA2">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                </w:rPr>
+                <w:t xml:space="preserve">Выписка из реестра лишенных (ограниченных) родительских прав </w:t>
+            </w:r>
+        </w:p>
+        <w:p w:rsidR="0000306F" w:rsidRPr="008F3D3E" w:rsidRDefault="0000306F" w:rsidP="0000306F">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                </w:rPr>
+            </w:pPr>
+        </w:p>
+        <w:p w:rsidR="0000306F" w:rsidRPr="008F3D3E" w:rsidRDefault="008F3D3E" w:rsidP="0000306F">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:ind w:firstLine="708"/>
+                <w:jc w:val="both"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                    <w:lang w:val="en-US"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">Сообщаем, что </w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>у</w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F" w:rsidRPr="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> {{adult_fio}} </w:t>
+            </w:r>
+            <w:r w:rsidRPr="008F3D3E">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>(</w:t>
+            </w:r>
+            <w:r w:rsidRPr="008F3D3E">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">СНИЛС {{adult_snils}} </w:t>
+            </w:r>
+            <w:proofErr w:type="spellStart"/>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r w:rsidRPr="008F3D3E">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">) </w:t>
+            </w:r>
+            <w:r w:rsidRPr="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">по состоянию на {{current_date}}, </w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>в реестре лишенных</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r w:rsidRPr="008F3D3E">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">(ограниченных) </w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> родительских прав имеются</w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F" w:rsidRPr="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r w:rsidR="0000306F">
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>следующие записи о детях:</w:t>
+            </w:r>
+        </w:p>
+        <w:p w:rsidR="00A20A11" w:rsidRPr="00BA3AA2" w:rsidRDefault="00A20A11" w:rsidP="00BA3AA2">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                    <w:sz w:val="28"/>
+                </w:rPr>
+            </w:pPr>
+        </w:p>
+        {{loop_1_start}}
+        <w:tbl>
+            <w:tblPr>
+                <w:tblStyle w:val="a3"/>
+                <w:tblW w:w="9747" w:type="dxa"/>
+                <w:tblLayout w:type="fixed"/>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0"
+                           w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="2943"/>
+                <w:gridCol w:w="6804"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="454"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2943" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidRDefault="00EC4F9B" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>ФИО</w:t>
+                        </w:r>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve"> ребенка</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="6804" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidRDefault="00BA3AA2" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>{{child_fio}}</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="454"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2943" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidRDefault="000B5A51" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t>СНИЛС ребенка</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="6804" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00EC4F9B" w:rsidRPr="00BA3AA2" w:rsidRDefault="00BA3AA2" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>{{child_snils}}</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="454"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2943" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidRDefault="00E43D4A" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t>Тип записи</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="6804" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidRDefault="00BA3AA2" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>{{child_record_type}}</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00E43D4A" w:rsidRPr="008F3D3E" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="454"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2943" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidRDefault="00E43D4A" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t>Реквизиты документа</w:t>
+                        </w:r>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>-</w:t>
+                        </w:r>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t>основания</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="6804" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00E317FA" w:rsidRDefault="00E317FA" w:rsidP="00E317FA">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">{{child_doc_series}} {{child_doc_number}} {{child_doc_dep}}</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="454"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2943" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                        </w:tcBorders>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidRDefault="00E43D4A" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                            <w:t>Дата вступления в силу</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="6804" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                        </w:tcBorders>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00E43D4A" w:rsidRPr="00BA3AA2" w:rsidRDefault="00E317FA" w:rsidP="00E317FA">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="24"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00BA3AA2">
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:sz w:val="24"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>{{child_doc_start_date}}</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:proofErr w:type="spellEnd"/>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00CB66A8" w:rsidRPr="00BA3AA2" w:rsidTr="005C4754">
+                <w:trPr>
+                    <w:trHeight w:val="191"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="9747" w:type="dxa"/>
+                        <w:gridSpan w:val="2"/>
+                        <w:tcBorders>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="nil"/>
+                            <w:right w:val="nil"/>
+                        </w:tcBorders>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00CB66A8" w:rsidRPr="005C4754" w:rsidRDefault="00CB66A8" w:rsidP="00BA3AA2">
+                        <w:pPr>
+                            <w:spacing w:line="288" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                                <w:b/>
+                                <w:sz w:val="18"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        {{loop_1_end}}
+        <w:p w:rsidR="001123FE" w:rsidRPr="00BA3AA2" w:rsidRDefault="001123FE" w:rsidP="00BA3AA2">
+            <w:pPr>
+                <w:spacing w:after="0" w:line="288" w:lineRule="auto"/>
+                <w:rPr>
+                    <w:rFonts w:asciiTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi"/>
+                </w:rPr>
+            </w:pPr>
+            <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+            <w:bookmarkEnd w:id="0"/>
+        </w:p>
+        <w:sectPr w:rsidR="001123FE" w:rsidRPr="00BA3AA2" w:rsidSect="00EE0DC4">
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="720" w:right="991" w:bottom="720" w:left="1276" w:header="708" w:footer="708" w:gutter="0"/>
+            <w:cols w:space="708"/>
+            <w:docGrid w:linePitch="360"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

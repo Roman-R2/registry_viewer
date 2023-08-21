@@ -1,0 +1,156 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Реестр законных представителей
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'mainapp/plugins/fontawesome-free/css/all.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/dist/css/adminlte.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/custom/css/custom.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            Реестр законных представителей
+            {% if request.GET.search %} - Данные для СНИЛС <b>{{request.GET.search}}</b>{% endif %}
+        </h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div class="overlay-wrapper">
+            <div id="customOverlay" class="overlay dark"><i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </div>
+            <table id="dataTable" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>СНИЛС взрослого</th>
+                    <th>СНИЛС ребёнка</th>
+                    <th>ФИО взрослого</th>
+                    <th>ФИО ребёнка</th>
+                    <th>Код типа события</th>
+                    <th>Дата вступления в силу</th>
+                    <th>Серия документа</th>
+                    <th>Номер документа</th>
+                    <th>Орган выдавший документ</th>
+                    <th>Дата документа</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>СНИЛС взрослого</th>
+                    <th>СНИЛС ребёнка</th>
+                    <th>ФИО взрослого</th>
+                    <th>ФИО ребёнка</th>
+                    <th>Код типа события</th>
+                    <th>Дата вступления в силу</th>
+                    <th>Серия документа</th>
+                    <th>Номер документа</th>
+                    <th>Орган выдавший документ</th>
+                    <th>Дата документа</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+{% include "mainapp/_inc/datatables_js_settings.html" %}
+
+{% include "mainapp/_inc/active_link_js_settings.html" %}
+{% include "mainapp/_inc/datatables_overlay_js_settings.html" %}
+
+<script>
+  $(function () {
+    $("#dataTable").DataTable({
+      "ordering": false,
+      "processing": true,
+      "serverSide": true,
+      "ajax": "get_data\?format=json{% if request.GET.search %}&search_snils={{request.GET.search}}{% endif %}",
+      lengthMenu: [10, 20, 50],
+      "responsive": true,
+      "autoWidth": false,
+      "buttons": ["colvis"],
+      "language": {
+        "processing": "Запрашиваем данные c сервера...",
+        "search": "Поиск (по СНИЛС, ФИО и номеру документа): ",
+        "lengthMenu": "Показывать по _MENU_ строк",
+        "info": "Записи с _START_ до _END_ (всего _TOTAL_ записей)",
+        "zeroRecords": "В таблице нет данных...",
+        "infoEmpty": "В таблице нет записей",
+        "paginate": {
+          "first": "Первая",
+          "previous": "Предыдущая",
+          "next": "Следующая",
+          "last": "Последняя"
+        }
+      }
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  });
+</script>
+
+{% if request.GET.search %}
+<script>
+    refreshIntervalId =  setInterval(function() {
+        let pageNumEl = document.querySelector("#dataTable_length");
+        if (pageNumEl != null) {
+            let dtFiltersEl = document.querySelector("#dataTable_filter");
+            pageNumEl.style.display = 'none'
+            dtFiltersEl.style.display = 'none'
+            clearInterval(refreshIntervalId);
+        }
+    }, 100);
+
+    // Подсветим найденный снилс после загрузки данных
+    loadDataIntervalId = setInterval(() => {
+            processingEls = document.querySelector('#dataTable_processing');
+
+            LOADING = 'block';
+
+            if (processingEls.style.display != LOADING) {
+                clearInterval(loadDataIntervalId);
+                console.log('load');
+
+                const findNodeByContent = (text, root = document.body) => {
+                  const treeWalker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+                  const nodeList = [];
+                  while (treeWalker.nextNode()) {
+                    const node = treeWalker.currentNode;
+                    if (node.nodeType === Node.TEXT_NODE && node.textContent.includes(text)) {
+                      nodeList.push(node.parentNode);
+                    }
+                  };
+                return nodeList;
+            }
+
+            const result = findNodeByContent('{{request.GET.search}}');
+            console.log(result);
+
+            for (elem of result) {
+                elem.style.backgroundColor  = "Gold";
+            }
+        }
+     }, 200);
+
+
+</script>
+{% endif %}
+
+{% endblock %}

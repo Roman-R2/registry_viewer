@@ -1,0 +1,49 @@
+<!-- Модальное окно -->
+<form action="{% url 'mainapp:send_error_message' %}" method="post">
+    {% csrf_token %}
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                        Сообщить об ошибке приложения
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Имя пользователя"
+                               aria-label="Имя пользователя" aria-describedby="basic-addon1"
+                               value="{{ request.user }}" disabled>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <i class="fas fa-at"></i>
+                                </span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email (если хотите плучить ответ)"
+                               aria-label="Email (если хотите плучить ответ)" aria-describedby="basic-addon1"
+                               name="email_field">
+                    </div>
+                    <div class="input-group">
+                        <textarea class="form-control" placeholder="Опишите программную ощибку"
+                                  name="message_field" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

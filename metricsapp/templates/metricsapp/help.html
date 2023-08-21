@@ -1,0 +1,99 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-question"></i>
+                    Описание работы автопарсера и команды
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <blockquote class="quote-secondary">
+                            <p>
+                                В автоматическом парсинге не участвуют:
+                            <ul>
+                                <li><b>Реестр безработных граждан</b></li>
+                                <li><b>Реестр ЛРП от департамента</b></li>
+                            </ul>
+                            </p>
+                        </blockquote>
+
+                        <blockquote>
+                            <p>
+                                Для загрузки реестров в ручном режиме (кроме Реестр ЛРП от департамента):
+                            </p>
+                            <p>
+                                <code>
+                                    python manage.py command_name [--full_parse] registry_internal_name "file_path"
+                                </code>
+                            </p>
+                        </blockquote>
+
+                        <blockquote>
+                            <p>
+                                Отдельная команда для <b>Реестра ЛРП от департамента</b>:
+                            </p>
+                            <p>
+                                <code>
+                                    python manage.py registry_lrp_dop_process_v_2 [--full_parse] "file_folder"
+                                </code>
+
+                            </p>
+                            <p><code>file_folder</code> это папка с файлами данных ЛРП</p>
+                            <small>Причина наличия отдельной команды в том, что данные по этому реестру присылаются
+                                частями и поэтому делать полное затирание данных и перезаписывать их часть
+                                некорректно. </small>
+                        </blockquote>
+
+                        <p>
+                            <code>--full_parse</code> указать в случае полной замены данных в таблице, в случае дозаписи
+                            данных в существующую таблицу не указывать
+                        </p>
+
+                        <p>
+                            При этом <code>command_name</code>:
+                        <ul>
+                            <li>Реестр ЛРП: <code>registry_lrp_process_v_2</code></li>
+                            <li>Реестр НД: <code>registry_id_process_v_2</code></li>
+                            <li>Реестр ЗП: <code>registry_zp_process_v_2</code></li>
+                            <li>Реестр безработных граждан: <code>registry_br_process_v_2</code></li>
+                            <li>
+                                Реестр Ростехнадзора по транспортным средствам: <code>registry_rtn_ts_process_v_2</code>
+                            </li>
+                        </ul>
+                        </p>
+
+                        <p>
+                            При этом <code>registry_internal_name</code>:
+                        <ul>
+                            <li>Реестр ЛРП: <code>registry_lrp</code></li>
+                            <li>Реестр НД: <code>registry_id</code></li>
+                            <li>Реестр ЗП: <code>registry_zp</code></li>
+                            <li>Реестр безработных граждан: <code>registry_br</code></li>
+                            <li>Реестр Ростехнадзора по транспортным средствам: <code>registry_rtn_ts</code></li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+
+{% endblock %}

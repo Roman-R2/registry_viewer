@@ -1,0 +1,104 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-edit"></i>
+                    Логи автоматического парсинга данных (показано {{ logs_find_count }} из файла
+                    {{ logs_file_current}})
+                </h3>
+                <div class="card-tools">
+                    <ul class="nav nav-pills ml-auto">
+                        <li class="nav-item">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info">{{ logs_count }} последних</button>
+                                <button type="button"
+                                        class="btn btn-info dropdown-toggle dropdown-hover dropdown-icon"
+                                        data-toggle="dropdown">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" href="{% url 'metricsapp:auto_parse_logs' %}?items=100">100
+                                        последних</a>
+                                    <a class="dropdown-item" href="{% url 'metricsapp:auto_parse_logs' %}?items=200">200
+                                        последних</a>
+
+                                    <a class="dropdown-item" href="{% url 'metricsapp:auto_parse_logs' %}?items=500">500
+                                        последних</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        {% if logs_file_all %}
+                        <blockquote>
+                            <p>
+                                Также на сервере существуют файлы в папке логов парсинга, данные из которых не показаны:
+                            <ul>
+                                {% for item in logs_file_all %}
+                                <li>{{ item.name }}</li>
+                                {% endfor %}
+                            </ul>
+                            </p>
+
+                        </blockquote>
+                        {% endif %}
+                        <div class="btn-group">
+                            <a href="{% url 'metricsapp:auto_parse_logs' %}" class="btn btn-info">Все уровни ошибок</a>
+                            <a href="{% url 'metricsapp:auto_parse_logs_errors' %}" class="btn btn-danger">Уровень
+                                ERROR</a>
+                        </div>
+                        <br><br>
+                        {% if logs %}
+                        <table class="table table-striped table-valign-middle">
+                            <tbody>
+                            {% for item in logs %}
+                            <tr>
+                                <td><b>{{ forloop.counter }}</b></td>
+                                <td>{% if item.0 == 'INFO' %}
+                                    <small class="badge badge-info">{{ item.0 }}</small>
+                                    {% elif item.0 == 'ERROR' %}
+                                    <small class="badge badge-danger">{{ item.0 }}</small>
+                                    {% elif item.0 == 'CRITICAL' %}
+                                    <small class="badge badge-warning">{{ item.0 }}</small>
+                                    {% elif item.0 == 'DEBUG' %}
+                                    <small class="badge badge-default">{{ item.0 }}</small>
+                                    {% else %}
+                                    {{ item.0 }}
+                                    {% endif %}
+                                </td>
+                                <td>{{ item.1 }}</td>
+                                <td>{{ item.2 }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        {% else %}
+                        <h3>Логи не обнаружены</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+
+{% endblock %}

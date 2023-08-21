@@ -1,0 +1,70 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<style>
+    .no_border_input  {
+        border:none;
+        outline-width: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="row row offset-md-2">
+    <div class="col-md-2">
+        <h2>
+            {% include "authapp/_inc/back_to_users.html" %}
+        </h2>
+    </div>
+    <div class="col-md-6">
+        <h2>
+            Добавить нового пользователя
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card card-info">
+            <form class="form-horizontal some_margin" action="{% url 'authapp:register' %}" method="post"
+                  enctype="multipart/form-data" style="padding: 20px;">
+                {% csrf_token %}
+                {{ register_form.as_p }}
+                <br>
+<!--                <center>-->
+                    <a class="btn btn-default btn-block" id="password_generate_button">Сгенерировать пароли</a>
+                    <input style="text-align:center"
+                           class="btn btn-primary btn-block"
+                           type="submit"
+                           value="Добавить пользователя">
+<!--                </center>-->
+
+            </form>
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+<!--        <form class="form-horizontal" action="{% url 'authapp:register' %}" method="post" enctype="multipart/form-data">-->
+<!--            {% csrf_token %}-->
+<!--            {{ register_form.as_p }}-->
+<!--            <br>-->
+<!--            <input class="form-control" type="submit" value="Зарегистрировать пользователя">-->
+<!--        </form>-->
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+<script src="{% static 'authapp/js/login_generate.js' %}"></script>
+
+<script>
+    'use strict';
+    window.addEventListener('load', () => {
+        let loginGenerator = new LoginGenerator();
+        loginGenerator.init();
+    })
+</script>
+{% endblock %}

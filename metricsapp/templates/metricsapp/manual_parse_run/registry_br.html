@@ -1,0 +1,54 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% load my_custom_filters %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-server"></i>
+                    Ручной запуск парсинга регистра БР (безработных)
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <form action="{% url 'metricsapp:manual_parse_registry_br' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        {% for field in form %}
+                                        <div class="fieldWrapper" style="width: 100%">
+                                            {{ field }}
+                                            {{ field.errors }}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button class="input-group-text" type="submit">Загрузить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+{% endblock %}

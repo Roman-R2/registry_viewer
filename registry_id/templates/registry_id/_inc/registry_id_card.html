@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            Реестр недееспособных лиц
+            {% if request.GET.search %} - Данные для СНИЛС <b>{{request.GET.search}}</b>{% endif %}
+        </h3>
+
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <div class="overlay-wrapper">
+            <div id="customOverlay" class="overlay dark"><i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </div>
+
+            <table id="dataTable" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>СНИЛС взрослого</th>
+                    <th>ФИО взрослого</th>
+                    <th>Серия документа</th>
+                    <th>Номер документа</th>
+                    <th>Орган выдавший документ</th>
+                    <th>Дата документа</th>
+                    <th>Код типа события</th>
+                    <th>Дата вступления в силу</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>СНИЛС взрослого</th>
+                    <th>ФИО взрослого</th>
+                    <th>Серия документа</th>
+                    <th>Номер документа</th>
+                    <th>Орган выдавший документ</th>
+                    <th>Дата документа</th>
+                    <th>Код типа события</th>
+                    <th>Дата вступления в силу</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% load my_custom_filters %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-server"></i>
+                    Ручной запуск парсинга регистра БР (безработных)
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        {% for item in logs %}
+                        <div class="callout callout-info">
+                            <p>{{item}}</p>
+                        </div>
+                        {% empty %}
+                        <div class="callout callout-info">
+                            <p>Не логов</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        Ошибка
+        {% endblock %}
+    </title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'mainapp/plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/dist/css/adminlte.min.css' %}">
+
+    {% endblock %}
+</head>
+<body class="hold-transition login-page">
+
+{% block content %}
+{% endblock %}
+
+{% block js %}
+<!-- jQuery -->
+<script src="{% static 'mainapp/plugins/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'mainapp/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- AdminLTE App -->
+{% endblock %}
+</body>
+</html>

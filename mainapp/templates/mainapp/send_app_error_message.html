@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if is_app_send_message%}
+    <div class="alert alert-success alert-dismissible">
+        <h5><i class="icon fas fa-check"></i> Сообщение отправлено</h5>
+        {% if message_about_email %}{{ message_about_email }}{% endif %}
+    </div>
+{% else %}
+    {% if is_post_action %}
+        <div class="alert alert-danger alert-dismissible">
+            <h5><i class="icon fas fa-ban"></i> Сообщение не отправлено</h5>
+        </div>
+    {% else %}
+    {% endif %}
+{% endif %}
+<a href="{% url 'mainapp:index' %}" class="btn btn-info"> На главную страницу</a>
+
+{% endblock %}
+
+{% block js %}
+
+{% include "mainapp/_inc/active_link_js_settings.html" %}
+{% include "mainapp/_inc/collapse_js_settings.html" %}
+{% endblock %}

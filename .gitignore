@@ -1,0 +1,114 @@
+### IDE ###
+.idea
+
+### ENV ###
+.env
+
+### VENV ###
+venv
+
+### Python ###
+__pycache__/
+
+### BD ###
+*.sqlite3
+db_dump.bat
+
+### Data ###
+data/backup_folder/*.*
+!data/backup_folder/.gitkeep
+
+data/db_dackups/*.*
+!data/db_dackups/.gitkeep
+
+data/backup_folder/docx_extract_files/*.*
+!data/backup_folder/docx_extract_files/.gitkeep
+
+data/backup_folder/docx_extract_files/lrp_docx_extract/*.*
+!data/backup_folder/docx_extract_files/lrp_docx_extract/.gitkeep
+
+data/extracted_files/*.*
+!data/extracted_files/.gitkeep
+
+data/source_files/*.*
+!data/source_files/.gitkeep
+
+data/source_files/registry_rtn_ts/*.*
+!data/source_files/registry_rtn_ts/.gitkeep
+
+data/commands_for_launch/*.*
+!data/commands_for_launch/.gitkeep
+
+data/commands_for_launch/files/*.*
+!data/commands_for_launch/files/.gitkeep
+
+### Backup folders ###
+data/backup_folder/registry_br/*.*
+!data/backup_folder/registry_br/.gitkeep
+
+data/backup_folder/registry_id/*.*
+!data/backup_folder/registry_id/.gitkeep
+
+data/backup_folder/registry_lrp/*.*
+!data/backup_folder/registry_lrp/.gitkeep
+
+data/backup_folder/registry_lrp_dop/*.*
+!data/backup_folder/registry_lrp_dop/.gitkeep
+
+data/backup_folder/registry_rtn_ts/*.*
+!data/backup_folder/registry_rtn_ts/.gitkeep
+
+data/backup_folder/registry_state_support/*.*
+!data/backup_folder/registry_state_support/.gitkeep
+
+data/backup_folder/registry_zp/*.*
+!data/backup_folder/registry_zp/.gitkeep
+
+
+
+### Django ###
+*.pyc
+/media
+/static
+/staticfiles
+
+# Настройки
+app/settings_for_apps.py
+
+### Django migration folder ###
+/authapp/migrations/
+/api/migrations/
+/docx_generator/migrations/
+/mainapp/migrations/
+/metricsapp/migrations/
+/registry_br/migrations/
+/registry_id/migrations/
+/registry_lrp/migrations/
+/registry_lrp_dop/migrations/
+/registry_puv2/migrations/
+/registry_rtn_ts/migrations/
+/registry_zp/migrations/
+/searchapp/migrations/
+/statisticapp/migrations/
+/registry_state_support/migrations/
+
+### Other ###
+*.DS_Store
+/requirements.txt
+/poetry.lock
+
+#.coverage
+# папка с результатами выполнения команды coverage html ###
+#/htmlcov
+
+# Логи
+logs/registry_auto_parse_logs/*.*
+logs/registry_auto_parse_logs/!.gitkeep
+
+logs/bd_backup_logs/*.*
+logs/bd_backup_logs/!.gitkeep
+
+logs/command_runner_logs/*.*
+logs/command_runner_logs/!.gitkeep
+
+help.txt

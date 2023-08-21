@@ -1,0 +1,292 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Добавить запись
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'mainapp/plugins/fontawesome-free/css/all.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/plugins/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/dist/css/adminlte.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'mainapp/custom/css/custom.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            Добавить запись в реестр детей на гос. обеспечении
+        </h3>
+    </div>
+    <div class="card-body">
+        {% if success_saved_form %}
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-check"></i>Данные успешно сохранены!</h5>
+        </div>
+        {% endif %}
+        {% if form.non_field_errors %}
+        <div>
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+        <div class="overlay-wrapper">
+            <form action="{% url 'registry_state_support:add_row_registry_state_support' %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-6" style="border: 1px solid grey; padding: 20px;">
+                        <div class="form-group">
+                            <label>{{form.adult_snils.label }} <span style="color: #e83e8c">*</span></label>
+                            <input
+                                    type="text"
+                                    name="{{ form.adult_snils.html_name }}"
+                                    maxlength="14"
+                                    class="form-control"
+                                    id="{{ form.adult_snils.id_for_label}}"
+                                    placeholder="{{ form.adult_snils.label }}"
+                                    data-inputmask='"mask": "999-999-999 99"' data-mask
+                                    {% if form.adult_snils.value %}
+                                    value="{{ form.adult_snils.value }}"
+                                    {% endif %}
+                                    required
+                                    {% if form.adult_snils.errors %}style="border: 1px solid #e83e8c;" {% endif %}
+                            >
+                            {% if form.adult_snils.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.adult_snils.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.adult_fio.label }} <span style="color: #e83e8c">*</span></label></label>
+                            <input
+                                    type="text"
+                                    name="{{ form.adult_fio.html_name }}"
+                                    maxlength="256"
+                                    class="form-control"
+                                    id="{{ form.adult_fio.id_for_label}}"
+                                    placeholder="{{ form.adult_fio.label }}"
+                                    {% if form.adult_fio.value %}
+                                    value="{{ form.adult_fio.value }}"
+                                    {% endif %}
+                                    required
+                                    {% if form.adult_fio.errors %}
+                                    style="border: 1px solid #e83e8c;"
+                                    {% endif %}
+                            >
+                            {% if form.adult_fio.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.adult_fio.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <hr>
+                        <div class="form-group" style="padding-top:80px;">
+                            <label>{{form.another_adult_snils.label }}</label>
+                            <input
+                                    type="text"
+                                    name="{{ form.another_adult_snils.html_name }}"
+                                    maxlength="14"
+                                    class="form-control"
+                                    id="{{ form.another_adult_snils.id_for_label}}"
+                                    placeholder="{{ form.another_adult_snils.label }}"
+                                    data-inputmask='"mask": "999-999-999 99"' data-mask
+                                    {% if form.another_adult_snils.value %}
+                                    value="{{ form.another_adult_snils.value }}"
+                                    {% endif %}
+                                    {% if form.another_adult_snils.errors %}
+                                    style="border: 1px solid #e83e8c;"
+                                    {% endif %}
+                            >
+                            {% if form.another_adult_snils.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.another_adult_snils.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.another_adult_fio.label }}</label>
+                            <input
+                                    type="text"
+                                    name="{{ form.another_adult_fio.html_name }}"
+                                    maxlength="256"
+                                    class="form-control"
+                                    id="{{ form.another_adult_fio.id_for_label}}"
+                                    placeholder="{{ form.another_adult_fio.label }}"
+                                    {% if form.another_adult_fio.value %}
+                                    value="{{ form.another_adult_fio.value }}"
+                                    {% endif %}
+                                    {% if form.another_adult_fio.errors %}
+                                    style="border: 1px solid #e83e8c;"
+                                    {% endif %}
+                            >
+                            {% if form.another_adult_fio.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.another_adult_fio.errors }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-6" style="border: 1px solid grey; padding: 20px;">
+                        <div class="form-group">
+                            <label>{{form.child_snils.label }}<span style="color: #e83e8c">*</span></label>
+                            <input
+                                    type="text"
+                                    name="{{ form.child_snils.html_name }}"
+                                    maxlength="14"
+                                    class="form-control"
+                                    id="{{ form.child_snils.id_for_label}}"
+                                    placeholder="{{ form.child_snils.label }}"
+                                    data-inputmask='"mask": "999-999-999 99"' data-mask
+                                    {% if form.child_snils.value %}
+                                    value="{{ form.child_snils.value }}"
+                                    {% endif %}
+                                    required
+                                    {% if form.child_snils.errors %}style="border: 1px solid #e83e8c;" {% endif %}
+                            >
+                            {% if form.child_snils.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.child_snils.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.child_fio.label }}<span style="color: #e83e8c">*</span></label>
+                            <input
+                                    type="text"
+                                    name="{{ form.child_fio.html_name }}"
+                                    maxlength="256"
+                                    class="form-control"
+                                    id="{{ form.child_fio.id_for_label}}"
+                                    placeholder="{{ form.child_fio.label }}"
+                                    {% if form.child_fio.value %}
+                                    value="{{ form.child_fio.value }}"
+                                    {% endif %}
+                                    {% if form.child_fio.errors %}style="border: 1px solid #e83e8c;" {% endif %}
+                                    required
+                            >
+                            {% if form.child_fio.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.child_fio.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.child_birthdate.label }}<span style="color: #e83e8c">*</span></label>
+                            <input
+                                    type="date"
+                                    name="{{ form.child_birthdate.html_name }}"
+                                    class="form-control"
+                                    id="{{ form.child_birthdate.id_for_label}}"
+                                    placeholder="{{ form.child_birthdate.label }}"
+                                    {% if form.child_birthdate.value %}
+                                    value="{{ form.child_birthdate.value }}"
+                                    {% endif %}
+                                    {% if form.child_birthdate.errors %}
+                                    style="border: 1px solid #e83e8c;"
+                                    {% endif %}
+                                    required
+                            >
+                            {% if form.child_birthdate.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.child_birthdate.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.child_start_support_date.label }}<span style="color: #e83e8c">*</span></label>
+                            <input
+                                    type="date"
+                                    name="{{ form.child_start_support_date.html_name }}"
+                                    class="form-control"
+                                    id="{{ form.child_start_support_date.id_for_label}}"
+                                    placeholder="{{ form.child_start_support_date.label }}"
+                                    {% if form.child_start_support_date.value %}
+                                    value="{{ form.child_start_support_date.value }}"
+                                    {% endif %}
+                                    {% if form.child_start_support_date.errors %}
+                                    style="border: 1px solid #e83e8c;"
+                                    {%endif %}
+                                    required
+                            >
+                            {% if form.child_start_support_date.errors %}
+                            <span class="error"
+                                  style="color: #e83e8c;">{{ form.child_start_support_date.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.child_location.label }}</label>
+                            <input
+                                    type="text"
+                                    name="{{ form.child_location.html_name }}"
+                                    maxlength="256"
+                                    class="form-control"
+                                    id="{{ form.child_location.id_for_label}}"
+                                    placeholder="{{ form.child_location.label }}"
+                                    {% if form.child_location.value %}
+                                    value="{{ form.child_location.value }}"
+                                    {% endif %}
+                                    {% if form.child_location.errors %}style="border: 1px solid #e83e8c;" {% endif %}
+                            >
+                            {% if form.child_location.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.child_location.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label>{{form.child_status.label }}</label>
+                            <input
+                                    type="text"
+                                    name="{{ form.child_status.html_name }}"
+                                    maxlength="256"
+                                    class="form-control"
+                                    id="{{ form.child_status.id_for_label}}"
+                                    placeholder="{{ form.child_status.label }}"
+                                    {% if form.child_status.value %}
+                                    value="{{ form.child_status.value }}"
+                                    {% endif %}
+                                    {% if form.child_status.errors %}style="border: 1px solid #e83e8c;" {% endif %}
+                            >
+                            {% if form.child_status.errors %}
+                            <span class="error" style="color: #e83e8c;">{{ form.child_status.errors }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-12" style="padding: 20px;">
+                        <input class="form-control btn btn-info" type="submit" value="Добавить">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+{% include "mainapp/_inc/datatables_js_settings.html" %}
+{% include "mainapp/_inc/active_link_js_settings.html" %}
+{% include "mainapp/_inc/datatables_overlay_js_settings.html" %}
+{% include "mainapp/_inc/collapse_js_settings.html" %}
+{% include "mainapp/_inc/inputmask_js_settings.html" %}
+
+<script>
+  $(function () {
+    $('[data-mask]').inputmask()
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}
+

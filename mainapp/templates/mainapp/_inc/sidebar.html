@@ -1,0 +1,27 @@
+<div class="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+            data-accordion="false" id="navbar">
+            <li class="nav-header">РЕЕСТРЫ</li>
+            {% for item in compiled_links_data %}
+
+            <li class="nav-item">
+                <a href="{% url 'mainapp:index' %}{{ item.internal_service_registry_name }}/" class="nav-link">
+                    <i class="fas fa-address-card"></i>
+                    <p>{{ item.registry_short_name }}</p>
+                </a>
+            </li>
+            {% endfor %}
+            <li class="nav-header">ОБЩИЙ ПОИСК ПО РЕЕСТРАМ</li>
+            <li class="nav-item">
+                <a href="{% url 'searchapp:search_for_snils' %}" class="nav-link">
+                    <i class="nav-icon far fa-circle text-info"></i>
+                    <p class="text">по СНИЛС</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+</div>
